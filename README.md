@@ -157,11 +157,11 @@ Feel free to fork the project and submit a pull request.
 
 Ankit Pandey
 
-GitHub: https://github.com/YOUR_USERNAME
+GitHub: https://github.com/ankitpandey987359-stack
 
-LinkedIn: https://linkedin.com/in/YOUR_LINKEDIN
+LinkedIn: https://www.linkedin.com/in/ankit-pandey-632abb279?utm_source=share_via&utm_content=profile&utm_medium=member_android
 
-Email: your-email@example.com
+Email: ankitpandey987359@gmail.com
 
 ---
 
