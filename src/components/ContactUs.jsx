@@ -47,7 +47,7 @@ const ContactUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
-                onSubmit={onSubmit} className='grid sm:grid-cols-2 sm:gap-5 max-w-2xl w-full'>
+                onSubmit={onSubmit} className='grid sm:grid-cols-2 sm:gap-5 max-w-2xl w-80 sm:w-full '>
                 <div>
                     <p className='mb-2 text-sm font-medium'>Your name</p>
                     <div className='flex pl-3 rounded-lg border border-gray-300 dark:border-gray-600'>

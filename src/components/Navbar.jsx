@@ -9,13 +9,7 @@ const Navbar = ({ theme, setTheme }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   return (
     <>
-      {sidebarOpen && (
-        <div
-          className="fixed inset-0 bg-black/30 z-30"
-          onClick={() => setSidebarOpen(false)}
-        />
-      )}
-
+     
       <motion.div
       initial={{opacity:0,y:-50}}
       animate={{opacity:1,y:0}}
