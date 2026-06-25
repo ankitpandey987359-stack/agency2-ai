@@ -6,22 +6,31 @@ import { motion } from "motion/react"
 
 const Navbar = ({ theme, setTheme }) => {
 
+
   const [sidebarOpen, setSidebarOpen] = useState(false)
+
   return (
     <>
-     
+      {sidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black/40 z-30 sm:hidden"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
       <motion.div
-      initial={{opacity:0,y:-50}}
-      animate={{opacity:1,y:0}}
-      transition={{duration:0.6,ease:'easeOut'}}
-      
-      className='flex justify-between items-center px-4
-    sm:px-12 lg:px-24 xl:px-20 py-4 sticky top-0 z-20
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+
+        className='flex justify-between items-center px-4
+    sm:px-12 lg:px-24 xl:px-20 py-4 sticky top-0 z-50
     backdrop-blur-3xl font-medium bg-white/50 dark:bg-[#0F172A]'>
         <img src={theme === 'dark' ? assets.logo_dark : assets.logo} className='w-32 sm:w-40' alt='' />
 
 
-        <div className={`text-gray-700 dark:text-white sm:text-40 
+        <div 
+        onClick={(e) => e.stopPropagation()}
+        className={`text-gray-700 dark:text-white sm:text-40 
           ${!sidebarOpen
             ? 'max-sm:w-0 overflow-hidden'
             : 'max-sm:w-60 max-sm:pl-10'
@@ -30,7 +39,7 @@ const Navbar = ({ theme, setTheme }) => {
         max-sm:min-h-screen max-sm:h-full
         max-sm:flex-col max-sm:bg-primary
         max-sm:text-white max-sm:pt-20
-        max-sm:z-40
+        max-sm:z-[60]
         
 
         flex sm:items-center gap-13 transition-all`}>
