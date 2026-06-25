@@ -11,8 +11,8 @@ const Footer = ({ theme }) => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='bg-slate-100 dark:bg-[#0F172A] pt-10 sm:pt-10 mt-20 sm:mt-40 px-4
-                   sm:px-10 lg:px-24 xl:px-40 ' >
-            <div className='flex justify-between lg:items-center max:lgflex-col gap-10'>
+                   sm:px-10 lg:px-24 xl:px-40 overflow-hidden ' >
+            <div className='flex justify-between lg:items-center flex-col lg:flex-row gap-10'>
                 <motion.div
                     initial={{ opacity: 0, y: -30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -39,13 +39,13 @@ const Footer = ({ theme }) => {
                     transition={{ duration: 0.6, delay: 0.3 }}
                     viewport={{ once: true }}
 
-                    className='test-gray-600 dark:text-gray-400'>
+                    className=' w-full max-w-md test-gray-600 dark:text-gray-400 -ml-6'>
                     <h3 className='font-semibold'>Subscribe to our news letter</h3>
                     <p className='text-sm mt-2 mb-6'>The latest news,article and resources, sent to your inbox weekly</p>
                     <div className='flex gap-2 text-sm'>
                         <input type="email" placeholder='Enter your email' className='w-full p-3 text-sm outline-none
                         rounded-lg drak:text-gray-200 bg-transparent border border-gray-300 drak:border=gray-500' />
-                        <button className='bg-primary text-white rounded-lg px-6'>Subscribe</button>
+                        <button className='bg-primary text-white rounded-lg px-6 '>Subscribe</button>
                     </div>
                 </motion.div>
             </div>
@@ -55,7 +55,7 @@ const Footer = ({ theme }) => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
-                className='flex justify-center sm:justify-between gap-4 pb-6 text-sm text-gray-500'>
+                className='flex flex-col sm:flex-row items-center justify-between gap-4 pb-6 text-sm text-gray-500'>
                 <p>Copyright 2026 @ Ankitpandey - All Right Reserved.</p>
                 <div className='flex items-center justify-between gap-4'>
                     <img src={assets.facebook_icon} alt="" />
